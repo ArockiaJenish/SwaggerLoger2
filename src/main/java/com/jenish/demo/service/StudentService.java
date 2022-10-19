@@ -53,4 +53,8 @@ public class StudentService {
 		return "Deleted";
 	}
 
+	public Student getOneStudent(int id) {
+		return stuRepo.findById((long) id).get();
+	}
+
 }
