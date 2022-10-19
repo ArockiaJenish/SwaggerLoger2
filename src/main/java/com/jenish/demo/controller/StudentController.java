@@ -21,7 +21,7 @@ public class StudentController {
 	@Autowired
 	private StudentService stuServ;
 	
-	//Logger logger = LoggerFactory.getLogger(StudentController.class);
+	Logger logger = LoggerFactory.getLogger(StudentController.class);
 	
 	@RequestMapping(method=RequestMethod.POST, value="/addStudent")
 	public Student addStudent(@RequestBody Student stu) throws Exception {
@@ -30,7 +30,7 @@ public class StudentController {
 	
 	@RequestMapping(method=RequestMethod.GET, value="/getAll")
 	public List<Student> getAllStu(){
-		//logger.debug("Hello from debug controller");
+		logger.debug("Hello from debug controller");
 		return stuServ.getAllStu();
 	}
 	
