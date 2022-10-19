@@ -44,7 +44,7 @@ public class StudentService {
 			oldStu.setCity(newStu.getCity());
 		if(newStu.getEmail()!=null)
 			oldStu.setEmail(newStu.getEmail());
-		
+		logger.debug("Updated method hitted");
 		return stuRepo.save(oldStu);
 	}
 
